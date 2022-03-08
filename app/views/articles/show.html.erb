@@ -1,3 +1,6 @@
 <h1>Show Pages</h1>
-<p><strong>Title:<%= @article.title%></strong></p>
-<p><strong>Description:<%= @article.description %></strong></p>
+<p><strong><%= @article.title %></strong></p>
+<p><strong><%= @article.description %></strong></p>
+<%=button_to 'Edit',edit_article_path(@article), method: :get %>
+<%= button_to 'Delete', article_path(@article), method: :delete, data: {confirm:"Are you sure"} %>
+<%= button_to 'Return to article listing', articles_path, method: :get%>
